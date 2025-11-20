@@ -1,6 +1,6 @@
 # 🐶 Sistema de Adoção de Pets (CRUD com Relacionamento)
 
-Sistema web desenvolvido para o gerenciamento de adoções de animais em uma ONG fictícia. Este projeto foi criado como atividade avaliativa para a disciplina de **Programação Web** no **Centro Universitário UDF**.
+Sistema web desenvolvido para o gerenciamento de adoções de animais em uma ONG fictícia. Este projeto foi criado como atividade avaliativa para a disciplina de **Programação Web** no **Centro Universitário Do Distrito Federal - UDF**.
 
 O objetivo principal do trabalho foi implementar **dois CRUDs** (Create, Read, Update, Delete) que possuam um **relacionamento de banco de dados (1:N)**.
 

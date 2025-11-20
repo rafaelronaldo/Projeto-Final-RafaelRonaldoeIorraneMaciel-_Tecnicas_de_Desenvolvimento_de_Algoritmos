@@ -14,13 +14,13 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `banco_de_dados` DEFAULT CHARACTER SET utf8 ;
+USE `banco_de_dados` ;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`racas`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`racas` (
+CREATE TABLE IF NOT EXISTS `racas` (
   `id_racas` INT NOT NULL AUTO_INCREMENT,
   `nome_raca` VARCHAR(100) NOT NULL,
   `porte_raca` VARCHAR(100) NOT NULL,
@@ -31,17 +31,17 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`animais`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`animais` (
+CREATE TABLE IF NOT EXISTS `animais` (
   `id_animais` INT NOT NULL AUTO_INCREMENT,
   `nome_animais` VARCHAR(100) NOT NULL,
   `idade_animais` INT NULL,
-  `status` VARCHAR(20) NULL,
+  `status_animais` VARCHAR(20) NULL,
   `racas_id_racas` INT NOT NULL,
   PRIMARY KEY (`id_animais`),
-  INDEX `fk_animais_racas_idx` (`racas_id_racas` ASC) VISIBLE,
+  INDEX `fk_animais_racas_idx` (`racas_id_racas` ASC),
   CONSTRAINT `fk_animais_racas`
     FOREIGN KEY (`racas_id_racas`)
-    REFERENCES `mydb`.`racas` (`id_racas`)
+    REFERENCES `racas` (`id_racas`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

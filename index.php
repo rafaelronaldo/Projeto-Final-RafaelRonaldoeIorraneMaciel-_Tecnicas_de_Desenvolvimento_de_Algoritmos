@@ -49,8 +49,14 @@
                             <li><a class="dropdown-item" href="?page=listar-adotante">Listar</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="?page=adotar-animal">Adotar Animal</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Adoção
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="?page=adotar-animal">Realizar Adoção</a></li>
+                            <li><a class="dropdown-item" href="?page=listar-adocao">Listar Adoções</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -104,14 +110,19 @@
                         case "editar-adotante": 
                             include("editar-adotante.php"); 
                             break;
-
+                        
+                        
                         case "adotar-animal": 
                             include("adotar-animal.php"); 
                             break;
                         case "salvar-adocao": 
                             include("salvar-adocao.php"); 
                             break;
-
+                        case "listar-adocao": 
+                            include("listar-adocao.php"); 
+                            break;
+                        
+                            
                         default:
                             print "<h1>Bem vindo ao Sistema de Adoção!</h1>";
                             print "<p>Escolha uma opção no menu para começar.</p>";

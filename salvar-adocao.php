@@ -35,5 +35,21 @@ switch ($_POST['acao']) {
             print "<script>location.href='?page=adotar-animal';</script>";
         }
         break;
+    
+case 'excluir':
+    $id_adocao = $_GET['id'];
+    
+    
+    $sql = "DELETE FROM adocoes WHERE id_adocoes = {$id_adocao}";
+    $res = $conn->query($sql);
+
+    if ($res) {
+        print "<script>alert('Adoção excluída com sucesso.');</script>";
+        print "<script>location.href='?page=listar-adocao';</script>";
+    } else {
+        print "<script>alert('Erro ao excluir a adoção.');</script>";
+        print "<script>location.href='?page=listar-adocao';</script>";
+    }
+    break;
 }
 ?>

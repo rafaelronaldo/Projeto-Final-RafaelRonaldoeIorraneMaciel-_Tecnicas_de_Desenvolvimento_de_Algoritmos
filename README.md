@@ -1,4 +1,4 @@
-# Projeto Final – [Seu Nome Completo] _ [Nome da Disciplina]
+# Projeto Final – [Rafael Ronaldo e Iorrane Maciel] _ [Técnicas e Desenvolvimento de Algoritmos]
 
 ## 🐾 Sistema de Adoção de Animais (AdotePET)
 
